@@ -161,3 +161,6 @@ gcc -o raygui.dynlib src/raygui.c -shared -fpic -DRAYGUI_IMPLEMENTATION -framewo
 ## license
 
 raygui is licensed under an unmodified zlib/libpng license, which is an OSI-certified, BSD-like license that allows static linking with closed source software. Check [LICENSE](LICENSE) for further details.
+
+## Changes in Fork
+* `GuiListViewEx` returns the `itemSelected` index.

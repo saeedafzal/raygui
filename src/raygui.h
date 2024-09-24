@@ -3372,21 +3372,17 @@ int GuiDummyRec(Rectangle bounds, const char *text)
 // List View control
 int GuiListView(Rectangle bounds, const char *text, int *scrollIndex, int *active)
 {
-    int result = 0;
     int itemCount = 0;
     const char **items = NULL;
 
     if (text != NULL) items = GuiTextSplit(text, ';', &itemCount, NULL);
 
-    result = GuiListViewEx(bounds, items, itemCount, scrollIndex, active, NULL);
-
-    return result;
+    return GuiListViewEx(bounds, items, itemCount, scrollIndex, active, NULL);
 }
 
 // List View control with extended parameters
 int GuiListViewEx(Rectangle bounds, const char **text, int count, int *scrollIndex, int *active, int *focus)
 {
-    int result = 0;
     GuiState state = guiState;
 
     int itemFocused = (focus == NULL)? -1 : *focus;
@@ -3528,7 +3524,7 @@ int GuiListViewEx(Rectangle bounds, const char **text, int count, int *scrollInd
     if (focus != NULL) *focus = itemFocused;
     if (scrollIndex != NULL) *scrollIndex = startIndex;
 
-    return result;
+    return itemSelected;
 }
 
 // Color Panel control - Color (RGBA) variant.
